@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 3.5)
-project(hls_lfcd_lds_driver)
+project(LDS_ROS_Driver)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)
@@ -28,9 +28,9 @@ include_directories(
   ${Boost_INCLUDE_DIRS}
 )
 
-add_executable(hlds_laser_publisher	src/hlds_laser_publisher.cpp)
-target_link_libraries(hlds_laser_publisher ${Boost_LIBRARIES})
-ament_target_dependencies(hlds_laser_publisher
+add_executable(LDS_ROS_driver	src/LDS_ROS_driver.cpp)
+target_link_libraries(LDS_ROS_driver ${Boost_LIBRARIES})
+ament_target_dependencies(LDS_ROS_driver
   rclcpp
   std_msgs
   sensor_msgs
@@ -42,7 +42,7 @@ install(DIRECTORY launch rviz
 )
 
 install(
-  TARGETS hlds_laser_publisher
+  TARGETS LDS_ROS_driver
   RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
