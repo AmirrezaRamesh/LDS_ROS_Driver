@@ -52,10 +52,12 @@ def generate_launch_description():
 
 ```
 
-how to run : 
+### how to run : 
 0. navigate to src of a ros2 ws : ```cd ros2_ws/src/ ```
 1. clone the package: ```git clone https://github.com/AmirrezaRamesh/LDS_ROS_Driver ```
 2. back to ws and build: ```colcon build --packges-select LDS_ROS_Driver```
 3. source enviroment : ```source ~/ros2_ws/install/setup.bash```
 4. run the launch file: ```ros2 launch LDS_ROS_Driver hlds_laser.launch.py```
-5. LDS 1.0 is drived and the /scan is published 
+5. LDS 1.0 is drived and the /scan is published
+   
+note : there is a python file in sub_example directory which shows how to sub to the data according to the QoS profile
