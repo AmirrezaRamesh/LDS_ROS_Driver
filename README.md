@@ -9,7 +9,7 @@ I added some small changes to LDS ROS2 driver which I initially forked from the 
 ### Intro : 
 here we have a cpp program which will receive the data over a serial port and publishes the data on a /scan topic with the predefined QoS profile for sensor data
 ```
-     laser_pub = node->create_publisher<sensor_msgs::msg::LaserScan>("scan",rclcpp::QoS(rclcpp::SensorDataQoS()));
+laser_pub = node->create_publisher<sensor_msgs::msg::LaserScan>("scan",rclcpp::QoS(rclcpp::SensorDataQoS()));
 ```
 When you launch the program, it publishes data for the full 360 degrees of the surrounding environment. However, sometimes our LiDAR is positioned on the robot in a way that certain angles are blocked by the robot's body. Or, in some scenarios where the robot needs to navigate a path, we may not need the full 360-degree data, as parts of it might be irrelevant or unhelpful.
 
