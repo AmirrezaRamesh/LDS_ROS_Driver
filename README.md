@@ -43,7 +43,7 @@ def generate_launch_description():
             default_value=360,
             description='Specifying the range of angles we need the data of, being published on /scan'),
         Node(
-            package='LDS_ROS_Driver
+            package='LDS_ROS_Driver',
             executable='hlds_laser_publisher',
             name='hlds_laser_publisher',
             parameters=[{'port': port, 'frame_id': frame_id, 'range' : range}],
